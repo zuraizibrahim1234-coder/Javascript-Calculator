@@ -11,6 +11,6 @@ I used AI to correct some typos when I couldn't find them(My code wasn't working
 Otherwise usage of AI is absent.
 A YouTube channel named GreatStack helped me in this project.
 ## Screenshot ##
-![alt text](<Screenshot 2026-08-05 012038.png>).
+![alt text](<Screenshot 2026-08-05 012038.png>)
 ## Playable-Link ##
 https://zuraizibrahim1234-coder.github.io/Javascript-Calculator/
