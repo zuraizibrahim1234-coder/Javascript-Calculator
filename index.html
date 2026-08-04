@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>Calculator by Javascript</Title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="calculator">
+        <form>
+            <div class="display">
+                <input style="border:2px solid;border-color: rgb(255, 251, 0);padding:7px;" type="text" name="display" readonly>
+            </div>
+            <div>
+                <input type="button" value="AC" onmousedown="display.value=''" style="color: rgb(0, 0, 0);">
+                <input type="button" value="DE" onmousedown="display.value= display.value.toString().slice(0,-1)" style="color: rgb(0, 0, 0);">
+                <input type="button" value="." onmousedown="display.value+='.'">
+                <input type="button" value="/" onmousedown="display.value+='/'" style="color: rgb(0, 0, 0);">
+            </div>
+            <div>
+                <input type="button" value="7" onmousedown="display.value += '7'">
+                <input type="button" value="8" onmousedown="display.value += '8'">
+                <input type="button" value="9" onmousedown="display.value += '9'">
+                <input type="button" value="*" onmousedown="display.value += '*'" style="color: rgb(0, 0, 0);">
+            </div>
+            <div>
+                <input type="button" value="4" onmousedown="display.value += '4'">
+                <input type="button" value="5" onmousedown="display.value += '5'">
+                <input type="button" value="6" onmousedown="display.value += '6'">
+                <input type="button" value="-" onmousedown="display.value += '-'" style="color: rgb(0, 0, 0);">
+            </div>
+            <div>
+                <input type="button" value="1" onmousedown="display.value += '1'">
+                <input type="button" value="2" onmousedown="display.value += '2'">
+                <input type="button" value="3" onmousedown="display.value += '3'">
+                <input type="button" value="+" onmousedown="display.value += '+'" style="color: rgb(0, 0, 0);">
+            </div>
+            <div>
+                <input type="button" value="00" onmousedown="display.value += '00'">
+                <input type="button" value="0" onmousedown="display.value += '0'">
+                <input type="button" value="=" onmousedown="display.value = eval(display.value)"class="equal" style="color: rgb(0, 0, 0);">
+            </div>
+        </form>
+    </div>
+
+</div>
+<audio id="clickSound" src="clickSound.wav" preload="auto"></audio>
+<script>
+const clickSound = document.getElementById("clickSound");
+document.querySelectorAll('input[type="button"]').forEach(button => {
+    button.addEventListener("mousedown",()=>{
+        clickSound.currentTime=0;
+        clickSound.play();
+    });
+});
+</script>
+</body>
+</html>
